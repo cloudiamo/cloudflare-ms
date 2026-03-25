@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectDefinition xsi:schemaLocation="http://ubiqube.com/xsd/microservice-objectdefinition.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <information>
+    <name>IPSEC Tunnels</name>
+    <icon>none</icon>
+    <description>Transmit packets between Cloudflare’s global network and your data centers using IPsec or Generic Routing Encapsulation (GRE) tunnels</description>
+    <group>Default|Tunnel</group>
+    <displayField>object_id</displayField>
+    <order>0</order>
+    <visibility>5</visibility>
+    <configType>json</configType>
+    <defaultDisplay>false</defaultDisplay>
+    <dynamic>false</dynamic>
+    <importIfMandatoryPresent>false</importIfMandatoryPresent>
+    <importonce>false</importonce>
+    <importrank>0</importrank>
+    <maxInstances>0</maxInstances>
+    <reorderinstances>false</reorderinstances>
+    <sortascending>false</sortascending>
+    <sortauto>false</sortauto>
+    <sortnumerical>false</sortnumerical>
+    <sortvariable>params._order</sortvariable>
+    <directoryNames>
+      <directoryName>Tunnel</directoryName>
+    </directoryNames>
+    <retainIfImportIsEmpty>false</retainIfImportIsEmpty>
+  </information>
+  <variables frozen="0">
+    <variable displayName="name" name="params.name" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="0" displayOrder="0" increment="0" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" isMandatory="false" isUserLocked="false" isGrouped="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false" createOnlyView="false" isEditLocked="false" frozen="false" arrayMinSizeRequired="false"/>
+    <variable displayName="object_id" name="params.object_id" startIncrement="0" type="AutoIncrement" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="100" displayOrder="0" increment="1" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" isMandatory="false" isUserLocked="false" isGrouped="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false" createOnlyView="false" isEditLocked="true" frozen="false" arrayMinSizeRequired="false"/>
+    <variable displayName="interface_address" name="params.interface_address" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="0" displayOrder="0" increment="0" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" isMandatory="false" isUserLocked="false" isGrouped="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false" createOnlyView="false" isEditLocked="false" frozen="false" arrayMinSizeRequired="false"/>
+    <variable displayName="cloudflare_endpoint" name="params.cloudflare_endpoint" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="0" displayOrder="0" increment="0" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" isMandatory="false" isUserLocked="false" isGrouped="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false" createOnlyView="false" isEditLocked="false" frozen="false" arrayMinSizeRequired="false"/>
+    <variable displayName="customer_endpoint" name="params.customer_endpoint" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="0" displayOrder="0" increment="0" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" isMandatory="false" isUserLocked="false" isGrouped="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false" createOnlyView="false" isEditLocked="false" frozen="false" arrayMinSizeRequired="false"/>
+    <variable displayName="description" name="params.description" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="0" displayOrder="0" increment="0" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" isMandatory="false" isUserLocked="false" isGrouped="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false" createOnlyView="false" isEditLocked="false" frozen="false" arrayMinSizeRequired="false"/>
+    <variable displayName="cf1_site_id" name="params.cf1_site_id" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="0" displayOrder="0" increment="0" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" isMandatory="false" isUserLocked="false" isGrouped="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false" createOnlyView="false" isEditLocked="false" frozen="false" arrayMinSizeRequired="false"/>
+    <variable displayName="load_balance_inner_flows" name="params.load_balance_inner_flows" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="0" displayOrder="0" increment="0" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" isMandatory="false" isUserLocked="false" isGrouped="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false" createOnlyView="false" isEditLocked="false" frozen="false" arrayMinSizeRequired="false"/>
+    <variable displayName="enabled" name="params.health_check.0.enabled" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="0" displayOrder="0" increment="0" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" isMandatory="false" isUserLocked="false" isGrouped="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false" createOnlyView="false" isEditLocked="false" frozen="false" arrayMinSizeRequired="false"/>
+    <variable displayName="target" name="params.health_check.0.target" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="0" displayOrder="0" increment="0" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" isMandatory="false" isUserLocked="false" isGrouped="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false" createOnlyView="false" isEditLocked="false" frozen="false" arrayMinSizeRequired="false"/>
+    <variable displayName="type" name="params.health_check.0.type" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="0" displayOrder="0" increment="0" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" isMandatory="false" isUserLocked="false" isGrouped="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false" createOnlyView="false" isEditLocked="false" frozen="false" arrayMinSizeRequired="false"/>
+    <variable displayName="rate" name="params.health_check.0.rate" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="0" displayOrder="0" increment="0" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" isMandatory="false" isUserLocked="false" isGrouped="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false" createOnlyView="false" isEditLocked="false" frozen="false" arrayMinSizeRequired="false"/>
+    <variable displayName="direction" name="params.health_check.0.direction" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="0" displayOrder="0" increment="0" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" isMandatory="false" isUserLocked="false" isGrouped="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false" createOnlyView="false" isEditLocked="false" frozen="false" arrayMinSizeRequired="false"/>
+  </variables>
+  <example>
+    <content>{
+  &quot;result&quot;: {
+    &quot;ipsec_tunnels&quot;: [
+      {
+        &quot;id&quot;: &quot;b00e0848796f46f2847eacd1533c7d4b&quot;,
+        &quot;interface_address&quot;: &quot;10.154.0.58/31&quot;,
+        &quot;cf1_site_id&quot;: null,
+        &quot;created_on&quot;: &quot;2026-03-25T09:17:52.461649Z&quot;,
+        &quot;modified_on&quot;: &quot;2026-03-25T09:17:52.461649Z&quot;,
+        &quot;name&quot;: &quot;testTunnel2&quot;,
+        &quot;cloudflare_endpoint&quot;: &quot;172.64.253.229&quot;,
+        &quot;customer_endpoint&quot;: &quot;212.52.24.103&quot;,
+        &quot;remote_identities&quot;: {
+          &quot;hex_id&quot;: &quot;39393231303537395f6230306530383438373936663436663238343765616364313533336337643462&quot;,
+          &quot;fqdn_id&quot;: &quot;b00e0848796f46f2847eacd1533c7d4b.99210579.ipsec.cloudflare.com&quot;,
+          &quot;user_id&quot;: &quot;ipsec@b00e0848796f46f2847eacd1533c7d4b.99210579.ipsec.cloudflare.com&quot;
+        },
+        &quot;description&quot;: &quot;another for test&quot;,
+        &quot;load_balance_inner_flows&quot;: true,
+        &quot;health_check&quot;: {
+          &quot;enabled&quot;: true,
+          &quot;target&quot;: &quot;10.154.0.59&quot;,
+          &quot;type&quot;: &quot;reply&quot;,
+          &quot;rate&quot;: &quot;low&quot;,
+          &quot;direction&quot;: &quot;bidirectional&quot;
+        }
+      },
+      {
+        &quot;id&quot;: &quot;294d2e136d5f4cb4bfad277eee9ed79d&quot;,
+        &quot;interface_address&quot;: &quot;10.154.0.57/31&quot;,
+        &quot;cf1_site_id&quot;: null,
+        &quot;created_on&quot;: &quot;2026-03-25T08:48:25.489552Z&quot;,
+        &quot;modified_on&quot;: &quot;2026-03-25T08:48:25.489552Z&quot;,
+        &quot;name&quot;: &quot;testTunnel&quot;,
+        &quot;cloudflare_endpoint&quot;: &quot;162.159.78.19&quot;,
+        &quot;customer_endpoint&quot;: &quot;212.52.24.103&quot;,
+        &quot;remote_identities&quot;: {
+          &quot;hex_id&quot;: &quot;39393231303537395f3239346432653133366435663463623462666164323737656565396564373964&quot;,
+          &quot;fqdn_id&quot;: &quot;294d2e136d5f4cb4bfad277eee9ed79d.99210579.ipsec.cloudflare.com&quot;,
+          &quot;user_id&quot;: &quot;ipsec@294d2e136d5f4cb4bfad277eee9ed79d.99210579.ipsec.cloudflare.com&quot;
+        },
+        &quot;description&quot;: &quot;for testing&quot;,
+        &quot;load_balance_inner_flows&quot;: true,
+        &quot;health_check&quot;: {
+          &quot;enabled&quot;: true,
+          &quot;target&quot;: &quot;212.52.24.103&quot;,
+          &quot;type&quot;: &quot;reply&quot;,
+          &quot;rate&quot;: &quot;mid&quot;,
+          &quot;direction&quot;: &quot;unidirectional&quot;
+        }
+      }
+    ]
+  },
+  &quot;success&quot;: true,
+  &quot;errors&quot;: [],
+  &quot;messages&quot;: []
+}</content>
+  </example>
+  <command name="IMPORT">
+    <operation><![CDATA[GET]]></operation>
+    <parser>
+      <section>
+        <regexp>@^\s \s*$@</regexp>
+        <xpath>$.result.ipsec_tunnels.*</xpath>
+      </section>
+      <lines>
+        <line>
+          <regexp><![CDATA[@^(?<object_id>.*)$@]]></regexp>
+          <xpath>$.id</xpath>
+        </line>
+        <line>
+          <regexp><![CDATA[@^(?<interface_address>.*)$@]]></regexp>
+          <xpath>$.interface_address</xpath>
+        </line>
+        <line>
+          <regexp><![CDATA[@^(?<name>.*)$@]]></regexp>
+          <xpath>$.name</xpath>
+        </line>
+        <line>
+          <regexp><![CDATA[@^(?<cloudflare_endpoint>.*)$@]]></regexp>
+          <xpath>$.cloudflare_endpoint</xpath>
+        </line>
+        <line>
+          <regexp><![CDATA[@^(?<customer_endpoint>.*)$@]]></regexp>
+          <xpath>$.customer_endpoint</xpath>
+        </line>
+        <line>
+          <regexp><![CDATA[@^(?<description>.*)$@]]></regexp>
+          <xpath>$.description</xpath>
+        </line>
+        <line>
+          <regexp><![CDATA[@^(?<cf1_site_id>.*)$@]]></regexp>
+          <xpath>$.cf1_site_id</xpath>
+        </line>
+        <line>
+          <regexp><![CDATA[@^(?<load_balance_inner_flows>.*)$@]]></regexp>
+          <xpath>$.load_balance_inner_flows</xpath>
+        </line>
+        <line>
+          <array name="health_check">
+            <lines>
+              <line>
+                <regexp><![CDATA[@^(?<enabled>.*)$@]]></regexp>
+                <xpath>$.enabled</xpath>
+              </line>
+              <line>
+                <regexp><![CDATA[@^(?<target>.*)$@]]></regexp>
+                <xpath>$.target</xpath>
+              </line>
+              <line>
+                <regexp><![CDATA[@^(?<type>.*)$@]]></regexp>
+                <xpath>$.type</xpath>
+              </line>
+              <line>
+                <regexp><![CDATA[@^(?<rate>.*)$@]]></regexp>
+                <xpath>$.rate</xpath>
+              </line>
+              <line>
+                <regexp><![CDATA[@^(?<direction>.*)$@]]></regexp>
+                <xpath>$.direction</xpath>
+              </line>
+            </lines>
+            <xpath>$.health_check</xpath>
+          </array>
+        </line>
+      </lines>
+    </parser>
+    <xpath>/client/v4/accounts/{$account_id}/magic/ipsec_tunnels</xpath>
+  </command>
+  <command name="CREATE">
+    <operation><![CDATA[{literal}{{/literal}
+  "name": "{$params.name}",
+  "customer_endpoint": "{$params.customer_endpoint}",
+  "cloudflare_endpoint": "{$params.cloudflare_endpoint}",
+  "interface_address": "{$params.interface_address}",
+  "description": "{$params.description}"
+{literal}}{/literal}]]></operation>
+    <rest>POST</rest>
+    <xpath>/client/v4/accounts/{$account_id}/magic/ipsec_tunnels</xpath>
+  </command>
+  <command name="READ"/>
+  <command name="UPDATE"/>
+  <command name="CONSTRAINT"/>
+  <command name="DELETE">
+    <rest>DELETE</rest>
+    <xpath>/client/v4/accounts/{$account_id}/magic/ipsec_tunnels/{$params.object_id}</xpath>
+  </command>
+  <command name="LIST"/>
+</ObjectDefinition>

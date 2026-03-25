@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectDefinition xsi:schemaLocation="http://ubiqube.com/xsd/microservice-objectdefinition.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <information>
+    <name>Domains</name>
+    <icon>none</icon>
+    <group>Default</group>
+    <displayField>object_id</displayField>
+    <order>0</order>
+    <visibility>5</visibility>
+    <configType>json</configType>
+    <defaultDisplay>false</defaultDisplay>
+    <dynamic>false</dynamic>
+    <importIfMandatoryPresent>false</importIfMandatoryPresent>
+    <importonce>false</importonce>
+    <importrank>0</importrank>
+    <maxInstances>0</maxInstances>
+    <reorderinstances>false</reorderinstances>
+    <sortascending>false</sortascending>
+    <sortauto>false</sortauto>
+    <sortnumerical>false</sortnumerical>
+    <sortvariable>params._order</sortvariable>
+    <retainIfImportIsEmpty>false</retainIfImportIsEmpty>
+  </information>
+  <variables frozen="0">
+    <variable displayName="object_id" name="params.object_id" startIncrement="0" type="AutoIncrement" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="100" displayOrder="0" increment="1" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" createOnlyView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" arrayMinSizeRequired="false" isMandatory="true" isUserLocked="false" isEditLocked="false" isGrouped="false" frozen="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false"/>
+    <variable displayName="name" name="params.name" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="0" displayOrder="0" increment="0" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" createOnlyView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" arrayMinSizeRequired="false" isMandatory="false" isUserLocked="false" isEditLocked="false" isGrouped="false" frozen="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false"/>
+    <variable displayName="status" name="params.status" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="0" displayOrder="0" increment="0" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" createOnlyView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" arrayMinSizeRequired="false" isMandatory="false" isUserLocked="false" isEditLocked="false" isGrouped="false" frozen="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false"/>
+    <variable displayName="name_servers" name="params.name_servers.0.value" startIncrement="0" type="String" mandatoryArray="false" visible="true" description="" groupSeparator="" groupDisplayName="" maxLength="250" displayOrder="0" increment="0" keepOnImport="false" editable="false" uniqueItemsInDropDownList="false" onlyDetailView="false" createOnlyView="false" arrayCanAdd="true" arrayCanRemove="true" arrayCanMove="true" arrayCanEdit="true" arrayMinSizeRequired="false" isMandatory="false" isUserLocked="false" isEditLocked="false" isGrouped="false" frozen="false" isSearchable="false" isUniqueGlobal="false" displayNameHeader="" fullDisplayName="" isCompositeKey="false" shared="false"/>
+  </variables>
+  <command name="IMPORT">
+    <operation><![CDATA[GET]]></operation>
+    <parser>
+      <section>
+        <regexp>@^\s \s*$@</regexp>
+        <xpath>$['result'].*</xpath>
+      </section>
+      <lines>
+        <line>
+          <regexp><![CDATA[@^(?<object_id>.*)$@]]></regexp>
+          <xpath>$['id']</xpath>
+        </line>
+        <line>
+          <regexp><![CDATA[@^(?<name>.*)$@]]></regexp>
+          <xpath>$['name']</xpath>
+        </line>
+        <line>
+          <regexp><![CDATA[@^(?<status>.*)$@]]></regexp>
+          <xpath>$['status']</xpath>
+        </line>
+        <line>
+          <array name="name_servers">
+            <lines>
+              <line>
+                <regexp><![CDATA[@^(?<value>.*)$@]]></regexp>
+                <xpath>$</xpath>
+              </line>
+            </lines>
+            <xpath>$.name_servers.*</xpath>
+          </array>
+        </line>
+      </lines>
+    </parser>
+    <xpath>/client/v4/zones?account.id={$account_id}</xpath>
+  </command>
+  <command name="CREATE">
+    <operation><![CDATA[{literal}{{/literal}
+  "account": {literal}{{/literal} "id": "{$account_id}" {literal}}{/literal},
+  "name": "{$params.name}"
+{literal}}{/literal}]]></operation>
+    <rest>POST</rest>
+    <xpath>/client/v4/zones</xpath>
+  </command>
+  <command name="READ"/>
+  <command name="UPDATE"/>
+  <command name="CONSTRAINT"/>
+  <command name="DELETE"/>
+  <command name="LIST"/>
+</ObjectDefinition>
